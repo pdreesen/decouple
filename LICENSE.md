@@ -6,7 +6,7 @@ MATLAB decoupling toolbox v0.1
 
 Software License Agreement
 
-Copyright (c) 2019, Vrije Universiteit Brussel – dept. ELEC
+Copyright (c) 2019, Vrije Universiteit Brussel - dept. ELEC
 All rights reserved.
 
 This software, decouple v0.1 (the "Program"), is being licensed.
@@ -17,7 +17,7 @@ Conditions (liability, etc.) are listed below.
 GENERAL TERMS
 
 
-LICENSE GRANT.  Vrije Universiteit Brussel – dept. ELEC grants to Licensee a nonexclusive license to freely use the Program for non-commercial applications only.
+LICENSE GRANT.  Vrije Universiteit Brussel - dept. ELEC grants to Licensee a nonexclusive license to freely use the Program for non-commercial applications only.
 
 
 CONDITIONS
