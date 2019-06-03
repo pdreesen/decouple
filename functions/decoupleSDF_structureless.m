@@ -1,6 +1,6 @@
-function [W,V,G,output] = decoupleSDF_structureless(F,X,r,d,Y,varargin)
+function [W,V,G,sol,output] = decoupleSDF_structureless(F,X,r,d,Y,varargin)
 %DECOUPLESDF  Decouple a given function using Structured Data Fusion. 
-%   [W,V,G,output] = decoupleSDF(F,X,r,d,Y) returns a decoupled
+%   [W,V,G,sol,output] = decoupleSDF(F,X,r,d,Y) returns a decoupled
 %   representation of a given multivariate polynomial vector function F by
 %   combining zeroth (function evaluation), first, and second-order 
 %   derivative information in the sampling points X, while imposing that 

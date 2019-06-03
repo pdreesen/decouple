@@ -1,6 +1,6 @@
-function [W,V,G,output] = decoupleSDF(F,X,r,d,Y,varargin)
+function [W,V,G,sol,output] = decoupleSDF(F,X,r,d,Y,varargin)
 %DECOUPLESDF  Decouple a given function using Structured Data Fusion. 
-%   [W,V,G,output] = decoupleSDF(F,X,r,d,Y) returns a decoupled
+%   [W,V,G,sol,output] = decoupleSDF(F,X,r,d,Y) returns a decoupled
 %   representation of a given multivariate polynomial vector function F by
 %   combining zeroth (function evaluation), first, and second-order 
 %   derivative information in the sampling points X, while imposing that 
@@ -72,8 +72,6 @@ for i = p.Results.info eval(sprintf('g%d = @(z,task) p.Results.structure(z,task,
 select_v = @(z,task) struct_select(z,task,2);
 select_c = @(z,task) struct_select(z,task,1);
 
-keyboard
-
 model.variables.cv = {p.Results.C,p.Results.V}; %C,V
 model.variables.w = p.Results.W;    
 
@@ -133,5 +131,4 @@ if (p.Results.plot)
     end
 end
     
-keyboard
 end %function
