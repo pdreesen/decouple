@@ -158,7 +158,7 @@ end
 F_SDF012 = vpa(expand(W_SDF01*subs(G_SDF01,symvar(G_SDF01).',V_SDF01'*sym('x', [1 m]).')),4)
 
 
-%%%% print internal functions
+%% print internal functions
 Uo=Vo.'*X;
 usymvars=sym('u', [1 r]);
 
@@ -167,14 +167,17 @@ for i=1:r,
     Go_mf = matlabFunction(Go(i),'vars', usymvars(i));
     subplot(2,r,i);
     plot(Uo(i,:), Go_mf(Uo(i,:)),'.')
+    title('true') 
 end
-
 Ue=V_SDF01.'*X;
 Ge=sol_SDF01.factors.G0;
 for i=1:r,
     subplot(2,r,i+r);
     plot(Ue(i,:), Ge(:,i),'.')
+    title('reconstructed') 
 end
+
+
 
 % End of DEMO
 echo off
