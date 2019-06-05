@@ -2,8 +2,12 @@
 
 MATLAB toolbox for decoupling multivariate vector functions
 
-authors: Philippe Dreesen, Jeroen De Geeter 
+authors: Jeroen De Geeter and Mariya Ishteva and Philippe Dreesen
+
+(c) 2018-2019 Vrije Universiteit Brussel (VUB)
+
+contact: philippe.dreesen@gmail.com
  
 
-See the demo file (demo.m) for usage.
+See the demo files (demo_xxx.m) for usage.
 
