@@ -9,32 +9,23 @@
 %% Clear workspace, close windows and clear the Command Window
 clear all; close all; clc;
 
+%% Preliminaries
+% check that decoupling toolbox is present
+if exist('checkfortensorlab') ~= 2,
+    warning('Decoupling toolbox not found. Add directory "functions" to the working path'); 
 
-%% Preliminaries: path to this toolbox and to tensorlab 
+    % manually add path to the MATLAB path
+    tlpath = uigetdir(pwd,'Select "functions" path');
 
-% add path to tensorlab folder to working path
-
-%check what is already present on the working path
-if exist('sdf_check') ~= 2, % this is a function from tensorlab
-    warning('This code requires tensorlab. Please download tensorlab from "http://www.tensorlab.net/" (click <a href="http://www.tensorlab.net">here</a>).');
-
-    % to manually add tensorlab path to the MATLAB path
-    tlpath = uigetdir(pwd,'Select tensorlab path');
     if exist('tlpath'), addpath(tlpath); end
 end
 
-if exist('sdf_check') ~= 2,
-    error('This code requires tensorlab.');
+if exist('checkfortensorlab')==2, disp('decoupling toolbox found!'); end
+
+% check that tensorlab toolbox is present
+if checkfortensorlab,
+    disp('tensorlab found!'); 
 end
-
-% add decoupling functions to path
-addpath(pwd); %this is a dangereous assumption
-addpath('./functions')
-% TODO: automatically figure out where
-% the demo.m file is located, and add the directory to MATLAB path
-% test = mfilename('fullpath'); 
-
-
 
 
 %% A simple example

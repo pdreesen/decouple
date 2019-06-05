@@ -4,6 +4,27 @@ close all
 clc
 
 echo on
+
+%% Preliminaries
+% check that decoupling toolbox is present
+if exist('checkfortensorlab') ~= 2,
+    warning('Decoupling toolbox not found. Add directory "functions" to the working path'); 
+
+    % manually add path to the MATLAB path
+    tlpath = uigetdir(pwd,'Select "functions" path');
+
+    if exist('tlpath'), addpath(tlpath); end
+end
+
+if exist('checkfortensorlab')==2, disp('decoupling toolbox found!'); end
+
+% check that tensorlab toolbox is present
+if checkfortensorlab,
+    disp('tensorlab found!'); 
+end
+
+
+
 %% Matrix SVD
 
 % Let us construct a Matrix A 

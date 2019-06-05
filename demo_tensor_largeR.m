@@ -4,6 +4,26 @@ close all
 clc
 
 echo on
+
+%% Preliminaries
+% check that decoupling toolbox is present
+if exist('checkfortensorlab') ~= 2,
+    warning('Decoupling toolbox not found. Add directory "functions" to the working path'); 
+
+    % manually add path to the MATLAB path
+    tlpath = uigetdir(pwd,'Select "functions" path');
+
+    if exist('tlpath'), addpath(tlpath); end
+end
+
+if exist('checkfortensorlab')==2, disp('decoupling toolbox found!'); end
+
+% check that tensorlab toolbox is present
+if checkfortensorlab,
+    disp('tensorlab found!'); 
+end
+
+
 %% CPD wih r (rank) > n (dimension)
 % This is a more challenging case than the case r <= n.
 
