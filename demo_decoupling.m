@@ -1,6 +1,12 @@
 %% DEMO file for MATLAB decoupling toolbox
 % 
 % Multivariate nonlinear vector function decoupling 
+%
+% version 0.2
+% June 2019
+%
+% Philippe Dreesen and Mariya Ishteva
+% Vrije Universiteit Brussel
 
 clear all; close all; clc; echo off;
 
@@ -166,8 +172,13 @@ end
 
 
 echo off
-% End of DEMO
 
 
-
+%% Questions
+% - Fix m and n and experiment with incresing r (r = 1, 2, 3, ...).
+% For each r, initialize a few times to get (close to) zero CPD-errors (cpderr). This is to avoid local minima.
+% For which r are the factors correctly recovered (up to scaling and permutation)? 
+% Fow which r is the decomposition unique?
+% - Should we always run the most "powerful" algorithms? 
+% Are the simpler algorithms faster in solving simpler problems?
 

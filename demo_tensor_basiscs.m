@@ -1,13 +1,17 @@
 %% DEMO file for MATLAB decoupling toolbox
 % 
 % Basic tensor operations
+%
+% version 0.2
+% June 2019
+%
+% Mariya Ishteva and Philippe Dreesen
+% Vrije Universiteit Brussel
 
 echo off
 clear variables
 close all
 clc
-
-echo on
 
 %% Preliminaries
 % check that decoupling toolbox is present
@@ -28,6 +32,7 @@ if checkfortensorlab,
 end
 
 
+echo on
 
 %% Matrix SVD
 
@@ -179,13 +184,26 @@ W, W_ten * diag(1./W_ten(1,:))
 % Press any key to continue.
 pause
 
+% To compare the factors, we can also use the cpderr function.
+% If the result is small (close to machine precision 1e-16),
+% then the factors are recovered correctly.
+
+cpderr({U, V, W}, {U_ten, V_ten, W_ten})
+
+% Press any key to continue.
+pause
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Can we apply the same normalization trick on SVD-factos?
+% Can we apply the above normalization trick on the SVD-factors?
 % --> We can, but the factors are still not the same
 
 U, U_svd * diag(1./U_svd(1,:))
 V, V_svd * diag(1./V_svd(1,:))
+
+% We can see this also with cpderr:
+
+cpderr({U, V}, {U_svd, V_svd})
 
 % Press any key to continue.
 pause

@@ -1,13 +1,19 @@
 %% DEMO file for MATLAB decoupling toolbox
 % 
-% Tensor operations: rank exceeding tensor dimensions 
+% Rank exceeding tensor dimensions 
+%
+% version 0.2
+% June 2019
+%
+% Mariya Ishteva and Philippe Dreesen
+% Vrije Universiteit Brussel
+
+
  
 echo off
 clear variables
 close all
 clc
-
-echo on
 
 %% Preliminaries
 % check that decoupling toolbox is present
@@ -27,6 +33,7 @@ if checkfortensorlab,
     disp('tensorlab found!'); 
 end
 
+echo on
 
 %% CPD wih r (rank) > n (dimension)
 % This is a more challenging case than the case r <= n.

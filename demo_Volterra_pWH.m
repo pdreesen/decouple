@@ -2,7 +2,13 @@
 % 
 % Parallel Wiener-Hammerstein modeling using tensor decomposition of Volterra kernels 
 % 
-% See paper P. Dreesen, D.T. Westwick, M. Ishteva, and J. Schoukens, "Modeling parallel Wiener-Hammerstein systems using tensor decomposition of Volterra kernels", Proc. 13th International Conference on Latent Variable Analysis and Signal Separation (LVA/ICA 2017), Grenoble, France, LNCS 10169, pages 16--25, 2017. (URL: http://homepages.vub.ac.be/~pdreesen/pub/dreesen2016pWHdec_FINAL_LNCS.pdf)
+% See paper P. Dreesen, D.T. Westwick, J. Schoukens, and M. Ishteva, "Modeling parallel Wiener-Hammerstein systems using tensor decomposition of Volterra kernels", Proc. 13th International Conference on Latent Variable Analysis and Signal Separation (LVA/ICA 2017), Grenoble, France, LNCS 10169, pages 16--25, 2017. (URL: http://homepages.vub.ac.be/~pdreesen/pub/dreesen2016pWHdec_FINAL_LNCS.pdf)
+%
+% version 0.2
+% June 2019
+%
+% Philippe Dreesen and Mariya Ishteva
+% Vrije Universiteit Brussel
  
 %% Preliminaries
 % check that decoupling toolbox is present
@@ -32,7 +38,7 @@ clear all; close all; clc;
 % % load test s
 % rng(s);
 
-mall = 8;    % FIR filter length
+mall = 5;    % FIR filter length
 
 % estimation/validation/test data length
 Ne = 3000;   % estimation data
@@ -43,7 +49,7 @@ Nt = 100;     % transient (points to be thrown out)
 SNRdb = 40;  
 
 % restart optimization (tensorlab's SDF) multiple times
-Nruns=10; 
+Nruns = 10; 
 
 % use initial values close to true parameters 
 test_with_good_initial_approximation=0; deviation_from_exact_init = 1e-1;
@@ -389,6 +395,7 @@ legend('noiseless','noisy','model');
 
 
 %% Questions
+% - How do the reuslts look for a "bad" run? Plot the figures and verify. What does this mean? 
 % - Study the influence of the SNR on modeling accuracy. 
 % - Study the influence of the FIR filter length on the computation time, modeling accuracy. 
 % - Currently the nonlinearity is assumed to have second and third-order terms. Can you extend the method to include first-order terms?
