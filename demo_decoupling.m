@@ -1,13 +1,8 @@
 %% DEMO file for MATLAB decoupling toolbox
 % 
-% Authors: Mariya Ishteva and Jeroen De Geeter and Philippe Dreesen
-% (c) Vrije Universiteit Brussel (VUB), 2019.  
-% 
-% version 0.2
+% Multivariate nonlinear vector function decoupling 
 
-
-%% Clear workspace, close windows and clear the Command Window
-clear all; close all; clc;
+clear all; close all; clc; echo off;
 
 %% Preliminaries
 % check that decoupling toolbox is present
@@ -170,8 +165,8 @@ end
 
 
 
-% End of DEMO
 echo off
+% End of DEMO
 
 
 

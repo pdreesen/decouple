@@ -3,11 +3,7 @@
 % Parallel Wiener-Hammerstein modeling using tensor decomposition of Volterra kernels 
 % 
 % See paper P. Dreesen, D.T. Westwick, M. Ishteva, and J. Schoukens, "Modeling parallel Wiener-Hammerstein systems using tensor decomposition of Volterra kernels", Proc. 13th International Conference on Latent Variable Analysis and Signal Separation (LVA/ICA 2017), Grenoble, France, LNCS 10169, pages 16--25, 2017. (URL: http://homepages.vub.ac.be/~pdreesen/pub/dreesen2016pWHdec_FINAL_LNCS.pdf)
-% 
-% Philippe Dreesen, (c) Vrije Universiteit Brussel (VUB), 2019.  
-% 
-% version 0.2
-
+ 
 %% Preliminaries
 % check that decoupling toolbox is present
 if exist('checkfortensorlab') ~= 2,

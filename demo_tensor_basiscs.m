@@ -1,3 +1,7 @@
+%% DEMO file for MATLAB decoupling toolbox
+% 
+% Basic tensor operations
+
 echo off
 clear variables
 close all

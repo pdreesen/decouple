@@ -1,3 +1,7 @@
+%% DEMO file for MATLAB decoupling toolbox
+% 
+% Tensor operations: rank exceeding tensor dimensions 
+ 
 echo off
 clear variables
 close all
