@@ -309,9 +309,9 @@ c12est = sol.variables.c12; % * sol.variables.b(1,1);
 c21est = sol.variables.c21; % * sol.variables.b(1,lh1+1);
 c22est = sol.variables.c22; % * sol.variables.b(1,lh1+1);
 
-if output.relerr > 1e-6
-    warning('relerr=%f',output.relerr)
-end
+% if output.relerr > 1e-6
+%     warning('relerr=%f',max(output.relerr))
+% end
 
 % simulate (validation) dataset with estimated system
 yg1e = filter(g1est,1,u);
@@ -339,7 +339,7 @@ Y0est(:,runi) = y0e;
 E0val(runi) = rmse0val; 
 Eval(runi)  = rmseval; 
 
-end % for expi
+end % for runi
 
 %% Plotting the (best) results
 
