@@ -5,7 +5,7 @@
 % version 0.2
 % June 2019
 %
-% Philippe Dreesen and Mariya Ishteva
+% Philippe Dreesen, Jeroen De Geeter and Mariya Ishteva
 % Vrije Universiteit Brussel
 
 clear all; close all; clc; echo off;
